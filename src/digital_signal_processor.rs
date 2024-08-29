@@ -1,7 +1,7 @@
-use crate::window::Window;
 use rust_decimal::prelude::ToPrimitive;
 use rust_decimal::Decimal;
 use rust_decimal_macros::dec;
+use yata::core::Window;
 
 #[derive(Default)]
 pub struct DigitalSignalProcessor {
@@ -37,40 +37,40 @@ impl DigitalSignalProcessor {
         }
     }
 
-    pub fn price(&self, i: u8) -> Decimal {
+    pub fn price(&self, i: u16) -> Decimal {
         *self.price.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn period(&self, i: u8) -> Decimal {
+    pub fn period(&self, i: u16) -> Decimal {
         *self.period.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn smooth(&self, i: u8) -> Decimal {
+    pub fn smooth(&self, i: u16) -> Decimal {
         *self.smooth.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn smooth_period(&self, i: u8) -> Decimal {
+    pub fn smooth_period(&self, i: u16) -> Decimal {
         *self.smooth_period.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn detrender(&self, i: u8) -> Decimal {
+    pub fn detrender(&self, i: u16) -> Decimal {
         *self.detrender.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn re(&self, i: u8) -> Decimal {
+    pub fn re(&self, i: u16) -> Decimal {
         *self.re.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn im(&self, i: u8) -> Decimal {
+    pub fn im(&self, i: u16) -> Decimal {
         *self.im.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn i1(&self, i: u8) -> Decimal {
+    pub fn i1(&self, i: u16) -> Decimal {
         *self.i1.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn i2(&self, i: u8) -> Decimal {
+    pub fn i2(&self, i: u16) -> Decimal {
         *self.i2.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn q1(&self, i: u8) -> Decimal {
+    pub fn q1(&self, i: u16) -> Decimal {
         *self.q1.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn q2(&self, i: u8) -> Decimal {
+    pub fn q2(&self, i: u16) -> Decimal {
         *self.q2.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
-    pub fn q3(&self, i: u8) -> Decimal {
+    pub fn q3(&self, i: u16) -> Decimal {
         *self.q3.get(i - 1).unwrap_or(&Decimal::ZERO)
     }
 }
