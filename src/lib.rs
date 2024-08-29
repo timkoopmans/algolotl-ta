@@ -6,4 +6,5 @@ pub mod empirical_mode_decomposition;
 pub mod enhanced_signal_to_noise_ratio;
 pub mod even_better_sinewave;
 pub mod instantaneous_trendline_filter;
+pub mod rate_of_change;
 pub mod super_smoother_filter;
