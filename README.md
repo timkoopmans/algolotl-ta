@@ -1,3 +1,3 @@
 # algolotl-ta
 
-![img.png](img.png)
+![](https://github.com/timkoopmans/algolotl-ta/blob/main/img.png?raw=true)
